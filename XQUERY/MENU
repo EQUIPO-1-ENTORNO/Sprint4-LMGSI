@@ -27,6 +27,12 @@ return $nombre
 
 6-Sólo el nombre y el primer ingrediente de todos los platos
 
+for $nombres in doc("restaurante.xml")//restaurante/menu/plato
+return
+<plato>
+  <nombre>{$nombres/nombre/text()}</nombre>
+  <ingrediente>{$nombres/ingredientes[1]/text()}</ingrediente>
+</plato>
 
 7-Haz 3 consultas más sobre lo que quieras
 
